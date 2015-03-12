@@ -1,7 +1,4 @@
----
-title: "Reproducible Research Course Project 1"
-output: html_document
----
+# First Assignment for the Reproducible Research Course Project 1
 
 ### Loading and preprocessing the data
 
@@ -50,6 +47,7 @@ The next code plots an histogram of the (mean of) steps taken per each day.
     		     c(0, 5000, 10000, 15000, 20000, 25000) )
 
 
+![1](figure/1.png)
 
 The following piece of code shows the mean and the median of steps taken each day. They are almost the same.
 
