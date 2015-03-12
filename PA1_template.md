@@ -73,6 +73,7 @@ The following code creates an object data frame named aver2 that contains the me
     		xlab = "Intervals",
      		ylab = "Means")
 
+![2](figure/2.png)
 
 It is useful to find out the interval with the highest number of steps. The following cose allows us to see that and print the result.
 
@@ -131,6 +132,7 @@ Here we conduct the same analysis that drove us to the first histogram but this 
     		xaxt = "n"
 		)
 
+![1](figure/3.png)
 
 And here is a comparion between the two means and medians (and other descriptive statistcs) of the two data frame.
 
@@ -182,6 +184,6 @@ And now we compute the mean of the steps, of each interval by each group (weeken
 	xyplot(ste ~ int | w, data = weekad, type = "l", layout = c(1,2))
 
 
-
+![1](figure/4.png)
 
 As the graph shows it looks like this subject has a maximum amount of steps in the weekday but the medium level of all steps is higher for the weekend in fact we can see that the averages of steps for the weekend days are (in mean) higher.
