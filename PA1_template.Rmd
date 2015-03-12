@@ -115,8 +115,6 @@ As we can see, the previous code worked well and now we do not have NA anymore.
 if(sum(is.na(data)) == 0){print("There are no NAs!")}
 ```
 
-### Are there differences in activity patterns between weekdays and weekends?
-
 Here we conduct the same analysis that drove us to the first histogram but this time using the dataNA data frame in order to see differences and an (eventual) impact of NAs.
 
 ```{r}
@@ -142,7 +140,7 @@ names <- c("Without NA", "NA filled")
 row.names(memt) <- names
 ```
 
-As we can see there are no significant differences between the two scenarios.
+As we can see there are no significant differences between the two scenarios. One difference is in the frequency of the middle class of steps that is increased since we included other data filled with mean.
 
 ```{r}
 WeekDays <- sapply(dataNA[, 2], weekdays)

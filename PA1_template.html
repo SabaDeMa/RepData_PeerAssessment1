@@ -142,9 +142,6 @@ for(i in 1:nrow(data)){
 }</code></pre>
 <p>As we can see, the previous code worked well and now we do not have NA anymore.</p>
 <pre class="r"><code>if(sum(is.na(data)) == 0){print(&quot;There are no NAs!&quot;)}</code></pre>
-</div>
-<div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level3">
-<h3>Are there differences in activity patterns between weekdays and weekends?</h3>
 <p>Here we conduct the same analysis that drove us to the first histogram but this time using the dataNA data frame in order to see differences and an (eventual) impact of NAs.</p>
 <pre class="r"><code>steps_day2 &lt;- tapply(dataNA$steps, dataNA$date, sum)
 mean_day2 &lt;- data.frame(Steps = steps_day2, Day = names(steps_day2))
@@ -164,12 +161,12 @@ hist(mean_day2$Steps,
 memt &lt;- rbind(memean, memean2)
 names &lt;- c(&quot;Without NA&quot;, &quot;NA filled&quot;)
 row.names(memt) &lt;- names</code></pre>
-<p>As we can see there are no significant differences between the two scenarios.</p>
+<p>As we can see there are no significant differences between the two scenarios. One difference is in the frequency of the middle class of steps that is increased since we included other data filled with mean.</p>
 <pre class="r"><code>WeekDays &lt;- sapply(dataNA[, 2], weekdays)
 
 dataNA &lt;- cbind(dataNA, WeekDays)</code></pre>
 </div>
-<div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends-1" class="section level3">
+<div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level3">
 <h3>Are there differences in activity patterns between weekdays and weekends</h3>
 <p>Now it is useful to find out differences of behavior of the steps variable in different days. A logical question arises when we consider days in which subject (from who data are collected) works (weekdays) and days of the week end, in other words, when it is most likely that subject does not work.</p>
 <p>The next code create an empty column in the dataNA data frame. This column will be very useful for our next analysis.</p>
